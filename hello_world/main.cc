@@ -6,6 +6,7 @@
  */
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 constexpr double Pi = acos(-1.);
 
@@ -23,8 +24,11 @@ int main()
 	area = Pi * radius * radius;
 
 	std:: cout<<
-			"Длина окружности = " << length << std::endl <<
-			"Площадь круга = " << area << std::endl;
+			std::fixed <<
+			"Длина окружности = " <<
+			std::setw(9) << std::setprecision(3) << length << std:: endl <<
+			"Площадь круга = " <<
+			std::setw(9) << std::setprecision(3) <<area << std::endl;
 
 	return 0;
 }
